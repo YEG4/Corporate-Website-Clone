@@ -1,0 +1,354 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Typography */
+html {
+  font-size: 100%;
+}
+
+body {
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 3.5rem;
+  color: #1d1c3f;
+  font-family: serif;
+}
+
+h5 {
+  font-size: 1.2rem;
+  color: #2f2f2f;
+  font-weight: 300;
+}
+
+/* Layout */
+
+.container {
+  width: 75%;
+  margin: 0 auto;
+}
+
+/* Header Section */
+.top-bar {
+  background-color: #1d1c3f;
+  color: #ffffff;
+  padding: 0.5em;
+  font-size: 0.8rem;
+}
+
+.fa-phone-flip,
+.fa-envelope {
+  font-size: 0.7rem;
+}
+
+.company-logo img {
+  width: 150px;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  background-color: #26253f;
+}
+
+nav ul {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+}
+nav ul li {
+  margin-left: 0.5em;
+  padding: 1.5em 1em;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+nav ul a:focus {
+  background-color: #000;
+}
+
+nav ul li:hover,
+nav ul li:focus {
+  background-color: #000000;
+}
+
+/* End of Header Section */
+
+/* Hero Section */
+.hero-section {
+  background-image: url('/dist/imgs/hero+section+bg.jpeg');
+  height: 100vh;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(26, 17, 43, 0.7);
+  z-index: -1;
+}
+
+.hero-section p {
+  width: 425px;
+}
+
+.hero-section h1 {
+  width: 400px;
+}
+
+.hero-section h1,
+.hero-section p {
+  text-align: center;
+  color: #fff;
+}
+/* End of Hero Section */
+
+/* Statistics Section */
+
+.statistics {
+  margin-top: -4.5%;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em 0;
+  font-family: 'Roboto', serif;
+  box-shadow: 2px 2px 30px 2px black;
+  border-bottom: 5px solid #d3b574;
+}
+
+.statistics > div {
+  text-align: center;
+  width: 24%;
+}
+
+.statistics > div > div {
+  font-size: 1.4rem;
+  margin-top: 0.2em;
+}
+
+.statistics > div:not(:nth-child(1)) {
+  border-left: 1px solid black;
+}
+
+.statistics span {
+  font-size: 3rem;
+  font-family: 'Roboto', serif;
+  font-weight: bold;
+}
+/* End of Statistics Section
+ */
+
+/* Why Us Section */
+.why-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 5em auto;
+  align-items: center;
+}
+
+.why-us {
+  width: 35%;
+}
+
+.why-p-container {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.why-p-container p:first-child {
+  max-width: 50%;
+}
+.why-p-container p:nth-child(2) {
+  max-width: 45%;
+}
+
+/* Solutions Section */
+
+.solutions {
+  background-color: #1d1c3f;
+}
+
+.grid {
+  padding: 4em 0;
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.solutions-left-section {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.solutions-left-section h5 {
+  margin-bottom: -3.8em;
+  font-size: 1.2rem;
+}
+
+.solutions-left-section h1 {
+  color: #fff;
+}
+
+.solutions-left-section button {
+  width: fit-content;
+  padding: 1em;
+  background-color: #d3b574;
+}
+
+.solutions-right-section {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.services {
+  background: #fff;
+  padding: 2em;
+  text-align: center;
+}
+.services h2 {
+  margin-bottom: 0.5em;
+}
+
+/* End of Solutions Section */
+
+/* Team Section */
+
+.team-section {
+  margin: 9em auto;
+  text-align: center;
+}
+
+.team-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.team {
+  width: 32%;
+  height: 29rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+}
+.team::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #151539;
+  opacity: 0.4;
+  transition: all 0.3s linear;
+}
+.team:hover::before {
+  opacity: 0;
+}
+
+.team:nth-child(1) {
+  background-image: url('../imgs/team1.jpeg');
+}
+.team:nth-child(2) {
+  background-image: url('../imgs/team2.jpeg');
+}
+.team:nth-child(3) {
+  background-image: url('../imgs/team3.jpeg');
+}
+
+.team h2 {
+  color: #fff;
+  width: 7rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-family: 'Montserrat', serif;
+  text-shadow: #000;
+  z-index: 10;
+}
+
+/* Second Hero Section */
+
+.success-section {
+  background-image: url(../imgs/hero.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 40rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: -1;
+}
+
+.success-section::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #151539;
+  opacity: 0.6;
+  z-index: -1;
+}
+
+.success-section h1,
+.success-section h5 {
+  color: #fff;
+}
+
+.success-section h1 {
+  width: 36rem;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+.success-section h5 {
+  margin-bottom: 1.7em;
+}
+/* End of Second Hero Section */
+
+/* Footer */
+footer {
+  background-color: #1d1c3f;
+  padding: 1em;
+  color: #fff;
+  text-align: center;
+}
